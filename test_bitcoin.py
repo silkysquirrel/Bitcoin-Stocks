@@ -1,5 +1,12 @@
 import unittest
-from bitcoin import Bitcoin
+from ingestion import load_btc_data
+
+
+df = load_btc_data("data/bitcoinprices.csv")
+
+# print(df.head())
+print(df.to_string())
+print(len(df))
 
 
 class TestBitcoin(unittest.TestCase):
@@ -13,3 +20,4 @@ class TestBitcoin(unittest.TestCase):
         pass
 
     def setUp(self):
+        pass
